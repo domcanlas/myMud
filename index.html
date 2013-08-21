@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MUD Challenge</title>
+
+<!-- Styles -->
+<link type="text/css" href="css/main.css" rel="stylesheet"/>
+
+<!-- Sources -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="mainContainer">
+	<div>
+	<h1> My MUD</h1>
+	</div>
+	
+	<div id="messageBox" class="bordered bigBox mt20 inline-block">
+		<div class="boxHeader">Messages</div>
+		<div class="sizedList">
+			<ul id="messageThread" >
+				
+			</ul>
+		</div>
+	</div>
+	
+	<div class="bordered inline-block bigBox">
+		<div class="boxHeader">Map</div>
+		<div class="mapContainer">
+			
+		</div>
+	</div>
+	
+	<div class="mt20 inline-block">
+		<input type="text" value="" id="commandLine" class="longInput"/>
+	</div>
+	<div class="mt20">
+		<span>Commands :</span><br/>
+		<span>move [direction] (i.e. north, south, east, west)</span><br/>
+		<span>say [message] (sends message to the room)</span><br/>
+		<span>yell [message] (sends message to the world)</span><br/>
+		<span>tell [person] [message] (sends private message to person)</span><br/>
+	</div>
+	
+	<div id="usernameBox" class="bordered">
+		<input id="username" type="text" class="longInput" value="" placeholder="Name"/>
+		<button value="enter" id="enterUser">Enter</button>
+	</div>
+
+</div>
+<div class="overlay"></div>
+
+<script src="js/messageSender.js"></script>
+<script src="js/messageHandler.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
