@@ -11,7 +11,6 @@ use Ratchet\ConnectionInterface;
 function handleMessage(ConnectionInterface $conn, $msg, &$world) {
 	try {
 		$msgObj = json_decode($msg, true);
-		var_dump($msgObj);
 		switch ($msgObj['cmd']) {
 			case "register":
 				 doRegister($conn, $msgObj['data'], $world);
